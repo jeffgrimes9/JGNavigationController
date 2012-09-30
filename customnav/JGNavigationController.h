@@ -15,4 +15,8 @@
 @property (nonatomic, retain) JGNavigationBar *navigationBar;
 @property (nonatomic, retain) JGToolbar *toolbar;
 
+- (id)initWithRootViewController:(UIViewController *)rootViewController;
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated;
+
 @end

@@ -8,25 +8,44 @@
 
 #import "JGNavigationBar.h"
 
+@interface JGNavigationBar ()
+
+@property (nonatomic, retain) UILabel *titleLabel;
+
+@end
+
+const float titlePaddingRatio = 0.1; // ratio of padding above and below the title to nav bar height
+const float leftDividerRatio = 0.225; // percentage of left button/title divider to nav bar width
+const float rightDividerRatio = 1 - leftDividerRatio; // percentage of left button/title divider to nav bar width
+
 @implementation JGNavigationBar
 
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
+- (void)set222Title:(NSString *)title {
+    self.title = title;
+    if (!self.titleLabel) {
+        [self drawRect:self.frame];
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width*leftDividerRatio, self.frame.origin.y + self.frame.size.height*titlePaddingRatio, self.frame.size.width*(rightDividerRatio - leftDividerRatio), self.frame.size.height)];
+        self.titleLabel.backgroundColor = [UIColor clearColor];
+        self.titleLabel.font = [UIFont fontWithName:@"Gill Sans" size:30];
+        self.titleLabel.textColor = [UIColor blackColor];
+        self.titleLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.titleLabel];
     }
-    return self;
+    self.titleLabel.text = title;
 }
 
-- (void)setTitle:(NSString *)title {
-    
-}
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
+    UIImage *image = [UIImage imageNamed:@"whitePixel.png"];
+    float heightMultiplier = 2; // ratio of JGNavigationBar's height to regular nav bar height
+    self.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height*heightMultiplier);
+    [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
-*/
+
+- (void)dealloc {
+    self.title = nil;
+    self.leftButton = nil;
+    self.rightButton = nil;
+    [super dealloc];
+}
 
 @end

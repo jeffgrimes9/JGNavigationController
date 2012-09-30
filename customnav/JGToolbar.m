@@ -10,19 +10,17 @@
 
 @implementation JGToolbar
 
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-    }
-    return self;
+- (void)drawRect:(CGRect)rect {
+    UIImage *image = [UIImage imageNamed:@"whitePixel.png"];
+    float heightMultiplier = 1.6; // ratio of JGToolbar's height to regular toolbar height
+    self.frame = CGRectMake(0, self.frame.origin.y-self.frame.size.height*(heightMultiplier-1), self.frame.size.width, self.frame.size.height*heightMultiplier);
+    [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)dealloc {
+    self.leftButton = nil;
+    self.rightButton = nil;
+    [super dealloc];
 }
-*/
 
 @end

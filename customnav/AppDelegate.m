@@ -9,21 +9,25 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "JGNavigationController.h"
+#import "DemoPages.h"
 
 @implementation AppDelegate
 
 - (void)dealloc {
     [_window release];
-    [_viewController release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    JGNavigationController *navController = [[JGNavigationController alloc] init];
-    [navController pushViewController:self.viewController animated:NO];
+    ViewController *vc = [[[DemoPages sharedInstance] pages] objectAtIndex:0];
+    JGNavigationController *navController = [[[JGNavigationController alloc] initWithRootViewController:vc] autorelease];
+    [navController.navigationBar set222Title:@"Email Login"];
+
+    ViewController *vc2 = [[[DemoPages sharedInstance] pages] objectAtIndex:1];
+    [navController pushViewController:vc2 animated:NO];
+    ViewController *vc3 = [[[DemoPages sharedInstance] pages] objectAtIndex:2];
+    [navController pushViewController:vc3 animated:NO];
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;

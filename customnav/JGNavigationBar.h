@@ -14,6 +14,6 @@
 @property (nonatomic, retain) UIButton *leftButton;
 @property (nonatomic, retain) UIButton *rightButton;
 
-- (void)setTitle:(NSString *)title;
+- (void)set222Title:(NSString *)title;
 
 @end

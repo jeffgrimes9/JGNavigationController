@@ -10,22 +10,24 @@
 
 @implementation JGNavigationController
 
-- (id)init {
-    if (self = [super initWithNavigationBarClass:[JGNavigationController class] toolbarClass:[JGToolbar class]]) {
-        
-    }
-    return self;
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (id)initWithRootViewController:(UIViewController *)rootViewController {
+    if (self = [super initWithNavigationBarClass:[JGNavigationBar class] toolbarClass:[JGToolbar class]]) {
+        [self pushViewController:rootViewController animated:NO];
+        [self setToolbarHidden:NO];
+    }
+    return self;
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [super pushViewController:viewController animated:animated];
+}
+
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated {
+    return [super popViewControllerAnimated:animated];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -17,10 +17,17 @@
 		015FDD5A1616B42C00358245 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 015FDD591616B42C00358245 /* Default@2x.png */; };
 		015FDD5C1616B42C00358245 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 015FDD5B1616B42C00358245 /* Default-568h@2x.png */; };
 		015FDD5F1616B42C00358245 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015FDD5E1616B42C00358245 /* ViewController.m */; };
-		015FDD621616B42C00358245 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015FDD601616B42C00358245 /* ViewController.xib */; };
+		015FDD621616B42C00358245 /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015FDD601616B42C00358245 /* View1.xib */; };
 		0190C4821618A8960079A991 /* JGNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0190C4811618A8960079A991 /* JGNavigationBar.m */; };
 		0190C4851618A8C40079A991 /* JGToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0190C4841618A8C40079A991 /* JGToolbar.m */; };
 		0190C4881618A8D70079A991 /* JGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0190C4871618A8D70079A991 /* JGNavigationController.m */; };
+		0190C48E1618B1430079A991 /* whitePixel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0190C48D1618B1430079A991 /* whitePixel.png */; };
+		0190C4961618B23B0079A991 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0190C4951618B23B0079A991 /* View2.xib */; };
+		0190C4981618B2790079A991 /* View3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0190C4971618B2790079A991 /* View3.xib */; };
+		0190C49A1618B2D20079A991 /* View4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0190C4991618B2D20079A991 /* View4.xib */; };
+		0190C49C1618B2DB0079A991 /* View5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0190C49B1618B2DB0079A991 /* View5.xib */; };
+		0190C49E1618B2E10079A991 /* View6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0190C49D1618B2E10079A991 /* View6.xib */; };
+		0190C4A11618B5BE0079A991 /* DemoPages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0190C4A01618B5BE0079A991 /* DemoPages.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,13 +46,21 @@
 		015FDD5B1616B42C00358245 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		015FDD5D1616B42C00358245 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		015FDD5E1616B42C00358245 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		015FDD611616B42C00358245 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		015FDD611616B42C00358245 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/View1.xib; sourceTree = "<group>"; };
 		0190C4801618A8960079A991 /* JGNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGNavigationBar.h; sourceTree = "<group>"; };
 		0190C4811618A8960079A991 /* JGNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGNavigationBar.m; sourceTree = "<group>"; };
 		0190C4831618A8C40079A991 /* JGToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGToolbar.h; sourceTree = "<group>"; };
 		0190C4841618A8C40079A991 /* JGToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGToolbar.m; sourceTree = "<group>"; };
 		0190C4861618A8D70079A991 /* JGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGNavigationController.h; sourceTree = "<group>"; };
 		0190C4871618A8D70079A991 /* JGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGNavigationController.m; sourceTree = "<group>"; };
+		0190C48D1618B1430079A991 /* whitePixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitePixel.png; sourceTree = "<group>"; };
+		0190C4951618B23B0079A991 /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View2.xib; sourceTree = "<group>"; };
+		0190C4971618B2790079A991 /* View3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View3.xib; sourceTree = "<group>"; };
+		0190C4991618B2D20079A991 /* View4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View4.xib; sourceTree = "<group>"; };
+		0190C49B1618B2DB0079A991 /* View5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View5.xib; sourceTree = "<group>"; };
+		0190C49D1618B2E10079A991 /* View6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View6.xib; sourceTree = "<group>"; };
+		0190C49F1618B5BE0079A991 /* DemoPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoPages.h; sourceTree = "<group>"; };
+		0190C4A01618B5BE0079A991 /* DemoPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoPages.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +138,17 @@
 			children = (
 				015FDD541616B42C00358245 /* AppDelegate.h */,
 				015FDD551616B42C00358245 /* AppDelegate.m */,
+				0190C49F1618B5BE0079A991 /* DemoPages.h */,
+				0190C4A01618B5BE0079A991 /* DemoPages.m */,
 				015FDD5D1616B42C00358245 /* ViewController.h */,
 				015FDD5E1616B42C00358245 /* ViewController.m */,
-				015FDD601616B42C00358245 /* ViewController.xib */,
+				015FDD601616B42C00358245 /* View1.xib */,
+				0190C4951618B23B0079A991 /* View2.xib */,
+				0190C4971618B2790079A991 /* View3.xib */,
+				0190C4991618B2D20079A991 /* View4.xib */,
+				0190C49B1618B2DB0079A991 /* View5.xib */,
+				0190C49D1618B2E10079A991 /* View6.xib */,
+				0190C48D1618B1430079A991 /* whitePixel.png */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -185,7 +208,13 @@
 				015FDD581616B42C00358245 /* Default.png in Resources */,
 				015FDD5A1616B42C00358245 /* Default@2x.png in Resources */,
 				015FDD5C1616B42C00358245 /* Default-568h@2x.png in Resources */,
-				015FDD621616B42C00358245 /* ViewController.xib in Resources */,
+				015FDD621616B42C00358245 /* View1.xib in Resources */,
+				0190C48E1618B1430079A991 /* whitePixel.png in Resources */,
+				0190C4961618B23B0079A991 /* View2.xib in Resources */,
+				0190C4981618B2790079A991 /* View3.xib in Resources */,
+				0190C49A1618B2D20079A991 /* View4.xib in Resources */,
+				0190C49C1618B2DB0079A991 /* View5.xib in Resources */,
+				0190C49E1618B2E10079A991 /* View6.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +231,7 @@
 				0190C4821618A8960079A991 /* JGNavigationBar.m in Sources */,
 				0190C4851618A8C40079A991 /* JGToolbar.m in Sources */,
 				0190C4881618A8D70079A991 /* JGNavigationController.m in Sources */,
+				0190C4A11618B5BE0079A991 /* DemoPages.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,12 +246,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		015FDD601616B42C00358245 /* ViewController.xib */ = {
+		015FDD601616B42C00358245 /* View1.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				015FDD611616B42C00358245 /* en */,
 			);
-			name = ViewController.xib;
+			name = View1.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
