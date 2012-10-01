@@ -22,7 +22,7 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     ViewController *vc = [[[DemoPages sharedInstance] pages] objectAtIndex:0];
     JGNavigationController *navController = [[[JGNavigationController alloc] initWithRootViewController:vc] autorelease];
-    [navController.navigationBar set222Title:@"Email Login"];
+    [navController.navigationBar setTitle:@"Email Login"];
 
     ViewController *vc2 = [[[DemoPages sharedInstance] pages] objectAtIndex:1];
     [navController pushViewController:vc2 animated:NO];

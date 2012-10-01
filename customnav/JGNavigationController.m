@@ -16,6 +16,7 @@
 
 - (id)initWithRootViewController:(UIViewController *)rootViewController {
     if (self = [super initWithNavigationBarClass:[JGNavigationBar class] toolbarClass:[JGToolbar class]]) {
+        [self.navigationBar.leftButton addTarget:self action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
         [self pushViewController:rootViewController animated:NO];
         [self setToolbarHidden:NO];
     }
@@ -23,7 +24,14 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    // hide back button to support custom leftButton
+    viewController.navigationItem.hidesBackButton = YES;
+    
     [super pushViewController:viewController animated:animated];
+    
+    if (!self.navigationBar.backItem) {
+        self.navigationBar.leftButton.hidden = YES;
+    }
 }
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
