@@ -30,8 +30,22 @@ static DemoPages *sharedInstance = nil;
         }
         self.pages = views;
         [views release];
+        self.pagesIndex = -1;
     }
     return self;
+}
+
+- (UIViewController *)nextPage {
+    self.pagesIndex++;
+    return [self.pages objectAtIndex:self.pagesIndex];
+}
+
+- (void)pageWasPopped {
+    self.pagesIndex--;
+}
+
+- (int)numPages {
+    return self.pages.count;
 }
 
 - (void)dealloc {

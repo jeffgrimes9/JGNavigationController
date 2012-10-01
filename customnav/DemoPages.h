@@ -11,7 +11,11 @@
 @interface DemoPages : NSObject
 
 @property (nonatomic, retain) NSMutableArray *pages;
+@property (nonatomic, assign) int pagesIndex;
 
 + (id)sharedInstance;
+- (UIViewController *)nextPage;
+- (void)pageWasPopped;
+- (int)numPages;
 
 @end

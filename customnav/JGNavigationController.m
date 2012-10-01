@@ -7,6 +7,7 @@
 //
 
 #import "JGNavigationController.h"
+#import "DemoPages.h"
 
 @implementation JGNavigationController
 
@@ -30,30 +31,36 @@
     viewController.navigationItem.hidesBackButton = YES;
     
     [super pushViewController:viewController animated:animated];
-    
-    if (!self.navigationBar.backItem) {
-        self.navigationBar.leftButton.hidden = YES;
-    }
-}
-
-- (IBAction)leftNavBarButtonTapped:(id)sender {
-    [self popViewControllerAnimated:YES];
-}
-
-- (IBAction)rightNavBarButtonTapped:(id)sender {
-    
-}
-
-- (IBAction)leftToolbarButtonTapped:(id)sender {
-    
-}
-
-- (IBAction)rightToolbarButtonTapped:(id)sender {
-    
 }
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
     return [super popViewControllerAnimated:animated];
+}
+
+- (IBAction)leftNavBarButtonTapped:(id)sender {
+    // triggered when user taps left nav bar button
+    if ([[DemoPages sharedInstance] pagesIndex] > 0) {
+        [self popViewControllerAnimated:YES];
+        [[DemoPages sharedInstance] pageWasPopped];
+    }
+}
+
+- (IBAction)rightNavBarButtonTapped:(id)sender {
+    // triggered when user taps left nav bar button
+    if ([[DemoPages sharedInstance] pagesIndex] < [[DemoPages sharedInstance] numPages] - 1) {
+        UIViewController *vc = [[DemoPages sharedInstance] nextPage];
+        [self pushViewController:vc animated:YES];
+    }
+}
+
+- (IBAction)leftToolbarButtonTapped:(id)sender {
+    // triggered when user taps left toolbar button
+    [self.navigationBar setTitle:@"Toolbar-L"];
+}
+
+- (IBAction)rightToolbarButtonTapped:(id)sender {
+    // triggered when user taps right toolbar button
+    [self.navigationBar setTitle:@"Toolbar-R"];
 }
 
 - (void)navBarAddedButtons {

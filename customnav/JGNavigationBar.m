@@ -32,7 +32,7 @@ const int button2Tag = 1001;
     if (!self.titleLabel) {
         // create titleLabel
         [self drawRect:self.frame];
-        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width*leftDividerRatio, self.frame.origin.y + self.frame.size.height*titlePaddingRatio, self.frame.size.width*(rightDividerRatio - leftDividerRatio), self.frame.size.height)];
+        self.titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width*leftDividerRatio, self.frame.origin.y + self.frame.size.height*titlePaddingRatio, self.frame.size.width*(rightDividerRatio - leftDividerRatio), self.frame.size.height)] autorelease];
         self.titleLabel.backgroundColor = [UIColor clearColor];
         self.titleLabel.font = [UIFont fontWithName:@"Gill Sans" size:30];
         self.titleLabel.textColor = [UIColor blackColor];

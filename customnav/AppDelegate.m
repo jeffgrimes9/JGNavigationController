@@ -20,14 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    ViewController *vc = [[[DemoPages sharedInstance] pages] objectAtIndex:0];
+    UIViewController *vc = [[DemoPages sharedInstance] nextPage];
     JGNavigationController *navController = [[[JGNavigationController alloc] initWithRootViewController:vc] autorelease];
-    [navController.navigationBar setTitle:@"Email Login"];
-
-    ViewController *vc2 = [[[DemoPages sharedInstance] pages] objectAtIndex:1];
-    [navController pushViewController:vc2 animated:NO];
-    ViewController *vc3 = [[[DemoPages sharedInstance] pages] objectAtIndex:2];
-    [navController pushViewController:vc3 animated:NO];
+    [navController.navigationBar setTitle:@"Custom Nav"];
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
