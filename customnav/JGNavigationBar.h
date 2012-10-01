@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JGNavigationBarProtocol <NSObject>
+- (void)navBarAddedButtons;
+@end
+
 @interface JGNavigationBar : UINavigationBar
 
+@property (nonatomic, assign) id<JGNavigationBarProtocol> navigationDelegate;
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) UIButton *leftButton;
 @property (nonatomic, retain) UIButton *rightButton;

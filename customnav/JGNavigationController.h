@@ -10,7 +10,7 @@
 #import "JGNavigationBar.h"
 #import "JGToolbar.h"
 
-@interface JGNavigationController : UINavigationController
+@interface JGNavigationController : UINavigationController <JGNavigationBarProtocol, JGToolbarProtocol>
 
 @property (nonatomic, retain) JGNavigationBar *navigationBar;
 @property (nonatomic, retain) JGToolbar *toolbar;

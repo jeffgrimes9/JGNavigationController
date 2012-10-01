@@ -69,6 +69,7 @@ const int button2Tag = 1001;
         self.leftButton = button1;
         self.rightButton = button2;
         self.buttonsAdded = YES;
+        [self.navigationDelegate navBarAddedButtons];
     }
 }
 

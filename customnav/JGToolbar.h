@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JGToolbarProtocol <NSObject>
+- (void)toolbarAddedButtons;
+@end
+
 @interface JGToolbar : UIToolbar
 
+@property (nonatomic, assign) id<JGToolbarProtocol> navigationDelegate;
 @property (nonatomic, retain) UIButton *leftButton;
 @property (nonatomic, retain) UIButton *rightButton;
 
